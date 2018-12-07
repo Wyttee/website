@@ -6,6 +6,8 @@
 /.idea
 .env
 .phpunit.result.cache
+.phpstorm.helper.php
+.phpstorm.meta.php
 Homestead.json
 Homestead.yaml
 npm-debug.log
