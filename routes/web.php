@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $team = \App\User::query()->take(3)->get();
+    $posts = \App\Post::query()->take(2)->get();
+    $projects = \App\Project::query()->take(3)->get();
+    $vacancies = \App\Vacancy::query()->take(2)->get();
+    $technologies = \App\Technology::query()->take(3)->get();
+
+    return view('main', [
+        'team' => $team,
+        'posts' => $posts,
+        'projects' => $projects,
+        'vacancies' => $vacancies,
+        'technologies' => $technologies
+    ]);
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

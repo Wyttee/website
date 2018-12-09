@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -46,6 +47,15 @@ class Technology extends Resource
             Text::make('Title')->sortable(),
 
             Text::make('Slug')->sortable(),
+
+            Select::make('Group')
+                ->options([
+                    'PHP',
+                    'JavaScript',
+                    'DataBase',
+                    'CSS',
+                    'Mobile',
+                ]),
         ];
     }
 

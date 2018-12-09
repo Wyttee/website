@@ -16,4 +16,9 @@ class Project extends Model
     protected $fillable = [
         'title', 'description', 'image_url',
     ];
+
+    public function image(): string
+    {
+        return asset($this->image_url);
+    }
 }
