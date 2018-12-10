@@ -4,9 +4,12 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Password;
+use Vyuldashev\NovaPermission\Permission;
+use Vyuldashev\NovaPermission\Role;
 
 class User extends Resource
 {
@@ -18,11 +21,14 @@ class User extends Resource
     public static $model = 'App\\User';
 
     /**
-     * The single value that should be used to represent the resource when being displayed.
+     * Get the value that should be displayed to represent the resource.
      *
-     * @var string
+     * @return string
      */
-    public static $title = 'name';
+    public function title()
+    {
+        return $this->name;
+    }
 
     /**
      * The columns that should be searched.
@@ -72,6 +78,10 @@ class User extends Resource
             Avatar::make('Photo', 'photo_url')
                 ->disk('public')
                 ->hideFromIndex(),
+
+            MorphToMany::make('Roles', 'roles', Role::class),
+
+            MorphToMany::make('Permissions', 'permissions', Permission::class),
         ];
     }
 

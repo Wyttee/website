@@ -20,11 +20,14 @@ class Human extends Resource
     public static $model = 'App\Human';
 
     /**
-     * The single value that should be used to represent the resource when being displayed.
+     * Get the value that should be displayed to represent the resource.
      *
-     * @var string
+     * @return string
      */
-    public static $title = 'id';
+    public function title()
+    {
+        return $this->name;
+    }
 
     /**
      * The columns that should be searched.
@@ -32,7 +35,7 @@ class Human extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'first_name', 'last_name', 'position',
+        'id', 'first_name', 'last_name',
     ];
 
     /**
