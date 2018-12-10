@@ -52,11 +52,10 @@ class User extends Authenticatable
     /**
      * Get the user photo attribute.
      *
-     * @param $value
      * @return UrlGenerator|string
      */
-    public function getPhotoAttribute($value)
+    public function getPhotoAttribute()
     {
-        return empty($value) ? 'https://via.placeholder.com/150' : url($value);
+        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/150' : url($this->getAttribute('photo_url'));
     }
 }
