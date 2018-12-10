@@ -38,6 +38,11 @@ class User extends Authenticatable
         'photo',
     ];
 
+    /**
+     * Get the user name attribute.
+     *
+     * @return string
+     */
     public function getNameAttribute()
     {
         return ucfirst($this->getAttribute('first_name')) . ' ' . ucfirst($this->getAttribute('last_name'));
