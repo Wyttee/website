@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Human extends Model
 {
@@ -60,5 +61,15 @@ class Human extends Model
     public function getAdditionalPhotoAttribute($value)
     {
         return empty($value) ? 'https://via.placeholder.com/150' : url($value);
+    }
+
+    /**
+     * Get the position of the user.
+     *
+     * @return BelongsTo
+     */
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
     }
 }

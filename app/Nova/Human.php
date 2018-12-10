@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Select;
@@ -67,18 +68,7 @@ class Human extends Resource
                 ->disk('public')
                 ->hideFromIndex(),
 
-            Select::make('Position')
-                ->options([
-                    'CEO and Founder',
-                    'Human Resources',
-                    'Project Manager',
-                    'Sales Manager',
-                    'Back End Developer',
-                    'Front End Developer',
-                    'Full Stack Developer',
-                    'QA',
-                ])
-                ->displayUsingLabels(),
+            BelongsTo::make('Position'),
         ];
     }
 
