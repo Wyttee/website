@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Contracts\Routing\UrlGenerator;
 
 class Project extends Model
 {
@@ -17,4 +18,23 @@ class Project extends Model
     protected $fillable = [
         'title', 'description', 'url',
     ];
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'photo',
+    ];
+
+    /**
+     * Get the user photo attribute.
+     *
+     * @return UrlGenerator|string
+     */
+    public function getPhotoAttribute()
+    {
+        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/150' : url($this->getAttribute('photo_url'));
+    }
 }

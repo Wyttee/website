@@ -24,20 +24,14 @@
                                 </form>
                             </div>
                             <ol class="list-unstyled">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">DATA & ANALYTICS</a></li>
-                                <li><a href="#">DEVOPS</a></li>
-                                <li><a href="#">EXPERIENCE DESIGN</a></li>
-                                <li><a href="#">FINANCIAL SERVICES</a></li>
-                                <li><a href="#">HEALTHCARE</a></li>
-                                <li><a href="#">INNOVATION PLATFORM</a></li>
-                                <li><a href="#">IOT, AI & ML</a></li>
-                                <li><a href="#">MEDIA</a></li>
-                                <li><a href="#">QUALITY MANAGEMENT</a></li>
-                                <li><a href="#">R&D</a></li>
-                                <li><a href="#">RETAIL</a></li>
-                                <li><a href="#">SECURITY</a></li>
-                                <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+                                <li class="active">
+                                    <a href="#">All</a>
+                                </li>
+                                @foreach ($positions as $position)
+                                    <li>
+                                        <a href="#">{{ strtoupper($position->name) }}</a>
+                                    </li>
+                                @endforeach
                             </ol>
                         </div>
 
@@ -53,19 +47,9 @@
                                 <button class="dropbtn">All</button>
                                 <div class="dropdown-content">
                                     <a href="#">All</a>
-                                    <a href="#">DATA & ANALYTICS</a>
-                                    <a href="#">DEVOPS</a>
-                                    <a href="#">EXPERIENCE DESIGN</a>
-                                    <a href="#">FINANCIAL SERVICES</a>
-                                    <a href="#">HEALTHCARE</a></li>
-                                    <a href="#">INNOVATION PLATFORM</a>
-                                    <a href="#">IOT, AI & ML</a>
-                                    <a href="#">MEDIA</a>
-                                    <a href="#">QUALITY MANAGEMENT</a>
-                                    <a href="#">R&D</a>
-                                    <a href="#">RETAIL</a>
-                                    <a href="#">SECURITY</a>
-                                    <a href="#">SOFTWARE DEVELOPMENT</a>
+                                    @foreach ($positions as $position)
+                                        <a href="#">{{ strtoupper($position->name) }}</a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -82,35 +66,10 @@
                                                 <div class="content-form-block">
                                                     <div class="bg-figure-form">
                                                         <div class="title-block d-flex flex-column justify-content-center align-items-center">
-                                                            <h2>
-                                                                <span class="modal-form-title">Full Stack (React/Node.js)</span>
-                                                                <br>
-                                                                <span class="modal-form-title">Developer in Ukraine</span>
-                                                            </h2>
+                                                            <h2>{{ $vacancy->title }}</h2>
                                                         </div>
-                                                        <p><span>Full Stack (React/Node.js) Developer </span>is simply dummy text of the
-                                                            printing and
-                                                            typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy
-                                                            text ever since the 1500s, when an unknown printer took a galley of type and
-                                                            scrambled it to make a type specimen book. It has survived not only five
-                                                            centuries, but also the leap into electronic typesetting, remaining essentially
-                                                            unchanged. Lorem Ipsum has been the industry&apos;s standard dummy text ever
-                                                            since the 1500s, when an unknown printer took a galley of type and scrambled it
-                                                            to make a type specimen book. It has survived not only five centuries, but also
-                                                            the leap into electronic typesetting, remaining essentially unchanged.
-                                                        </p>
-                                                        <p>
-                                                            It was popularised in the 1960s with the release of Letraset sheets containing
-                                                            Lorem Ipsum passages, and more recently with desktop publishing software like
-                                                            Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum has been the
-                                                            industry's standard dummy text ever since the 1500s, when an unknown printer
-                                                            took a galley of type and scrambled it to make a type specimen book. It has
-                                                            survived not only five centuries, but also the leap into electronic typesetting,
-                                                            remaining essentially unchanged. It was popularised in the 1960s with the
-                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                                                            with desktop publishing software like Aldus PageMaker including versions of
-                                                            Lorem Ipsum
-                                                        </p>
+
+                                                        <p>{!! $vacancy->body !!}</p>
 
                                                         <div class="title-form-block">
                                                             <div class="figure-block">
@@ -122,6 +81,7 @@
                                                                 </h2>
                                                             </div>
                                                         </div>
+
                                                         <form novalidate="">
                                                             <div class="row">
                                                                 <div class="col-md-6 pl-lg-0">

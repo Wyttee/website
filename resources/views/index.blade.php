@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @header([
-        'type' => 'full',
-        'video' => 'https://www.youtube.com/embed/QwIEeuHqID8?rel=0&loop=1&rel=0&showinfo=0&color=white'
-    ])
+    @header(['type' => 'full'])
 
     @endheader
 
@@ -59,15 +56,7 @@
         @endcontact
     </div>
 
-    @footer([
-        'copyright' => 'One Group Digital Solutions 2018',
-        'links' => [
-            'in' => 'https://www.linkedin.com/company/ogd-solutions/',
-            'facebook' => 'https://www.facebook.com/OGD-Solutions-214552309144764/',
-            'youtube' => 'https://www.youtube.com/channel/UCTzGIAGzUbUQGk3T5erBJzA',
-            'insta' => 'https://www.instagram.com/ogd.solutions/'
-        ]
-    ])
+    @footer(['copyright' => 'One Group Digital Solutions 2018'])
         <button id="upTop" title="Go to top">
             <span>&uarr;</span>
         </button>

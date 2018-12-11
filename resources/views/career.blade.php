@@ -24,20 +24,14 @@
                                 </form>
                             </div>
                             <ol class="list-unstyled">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">DATA & ANALYTICS</a></li>
-                                <li><a href="#">DEVOPS</a></li>
-                                <li><a href="#">EXPERIENCE DESIGN</a></li>
-                                <li><a href="#">FINANCIAL SERVICES</a></li>
-                                <li><a href="#">HEALTHCARE</a></li>
-                                <li><a href="#">INNOVATION PLATFORM</a></li>
-                                <li><a href="#">IOT, AI & ML</a></li>
-                                <li><a href="#">MEDIA</a></li>
-                                <li><a href="#">QUALITY MANAGEMENT</a></li>
-                                <li><a href="#">R&D</a></li>
-                                <li><a href="#">RETAIL</a></li>
-                                <li><a href="#">SECURITY</a></li>
-                                <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+                                <li class="active">
+                                    <a href="#">All</a>
+                                </li>
+                                @foreach ($positions as $position)
+                                    <li>
+                                        <a href="#">{{ strtoupper($position->name) }}</a>
+                                    </li>
+                                @endforeach
                             </ol>
                         </div>
 
@@ -53,19 +47,9 @@
                                 <button class="dropbtn">All</button>
                                 <div class="dropdown-content">
                                     <a href="#">All</a>
-                                    <a href="#">DATA & ANALYTICS</a>
-                                    <a href="#">DEVOPS</a>
-                                    <a href="#">EXPERIENCE DESIGN</a>
-                                    <a href="#">FINANCIAL SERVICES</a>
-                                    <a href="#">HEALTHCARE</a></li>
-                                    <a href="#">INNOVATION PLATFORM</a>
-                                    <a href="#">IOT, AI & ML</a>
-                                    <a href="#">MEDIA</a>
-                                    <a href="#">QUALITY MANAGEMENT</a>
-                                    <a href="#">R&D</a>
-                                    <a href="#">RETAIL</a>
-                                    <a href="#">SECURITY</a>
-                                    <a href="#">SOFTWARE DEVELOPMENT</a>
+                                    @foreach ($positions as $position)
+                                        <a href="#">{{ strtoupper($position->name) }}</a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -74,62 +58,20 @@
                     <div class="col px-0 px-lg-3">
                         <div class="row">
 
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="join-info-block">
-                                    <h3 class="join-info-block-title">Full Stack (React/Node.js) Developer in Ukraine</h3>
-                                    <p class="join-info-block-subtitle">
-                                        On behalf of our client, we are looking for a Full Stack (React/Node.js) developer to join
-                                        Lviv team on full-time basis.
-                                    </p>
-                                    <div class="col-12 col-md-12 p-0 text-center">
-                                        <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <span>apply</span>
-                                        </a>
+                            @foreach ($vacancies as $vacancy)
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
+                                    <div class="join-info-block">
+                                        <h3 class="join-info-block-title">{{ $vacancy->title }}</h3>
+                                        <p class="join-info-block-subtitle">{!! $vacancy->body !!}</p>
+                                        <div class="col-12 col-md-12 p-0 text-center">
+                                            {{--<a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">--}}
+                                            <a href="{{ route('vacancy', ['vacancy' => $vacancy]) }}" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1">
+                                                <span>Apply</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="join-info-block">
-                                    <h3 class="join-info-block-title">Full Stack (React/Node.js) Developer in Ukraine</h3>
-                                    <p class="join-info-block-subtitle">
-                                        On behalf of our client, we are looking for a Full Stack (React/Node.js) developer to join
-                                        Lviv team on full-time basis.
-                                    </p>
-                                    <div class="col-12 col-md-12 p-0 text-center">
-                                        <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <span>apply</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="join-info-block">
-                                    <h3 class="join-info-block-title">Full Stack (React/Node.js) Developer in Ukraine</h3>
-                                    <p class="join-info-block-subtitle">
-                                        On behalf of our client, we are looking for a Full Stack (React/Node.js) developer to join
-                                        Lviv team on full-time basis.
-                                    </p>
-                                    <div class="col-12 col-md-12 p-0 text-center">
-                                        <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <span>apply</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="join-info-block">
-                                    <h3 class="join-info-block-title">Full Stack (React/Node.js) Developer in Ukraine</h3>
-                                    <p class="join-info-block-subtitle">
-                                        On behalf of our client, we are looking for a Full Stack (React/Node.js) developer to join
-                                        Lviv team on full-time basis.
-                                    </p>
-                                    <div class="col-12 col-md-12 p-0 text-center">
-                                        <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <span>apply</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
@@ -139,7 +81,6 @@
 
     </div>
 
-    <!-- Modal -->
     <div class="modal modal-fullscreen modal-form fade" id="exampleModalCenter" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">

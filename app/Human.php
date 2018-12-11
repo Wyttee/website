@@ -48,7 +48,7 @@ class Human extends Model
      */
     public function getPhotoAttribute()
     {
-        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/150' : url($this->getAttribute('photo_url'));
+        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/250' : url($this->getAttribute('photo_url'));
     }
 
     /**
@@ -58,7 +58,7 @@ class Human extends Model
      */
     public function getAdditionalPhotoAttribute()
     {
-        return empty($this->getAttribute('additional_photo_url')) ? 'https://via.placeholder.com/150' : url($this->getAttribute('additional_photo_url'));
+        return empty($this->getAttribute('additional_photo_url')) ? 'https://via.placeholder.com/250' : url($this->getAttribute('additional_photo_url'));
     }
 
     /**

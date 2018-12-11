@@ -6,7 +6,7 @@
                     <div class="col col-md">
                         <nav class="navbar navbar-light" role="navigation">
                             <div class="navbar-header">
-                                <span class="navbar-brand logo-block" href="#">
+                                <span class="navbar-brand logo-block" href="{{ url('/') }}">
                                     <img src="{{ asset('images/logo.svg') }}" class="d-inline-block align-top" alt="One Group Digital Solution">
                                 </span>
                                 <button class="navbar-toggler-right btn-page btn-page-menu" type="button">
@@ -33,7 +33,7 @@
                         <div class="media-block">
                             <div class="video-block">
                                 <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe allow="encrypted-media" class="embed-responsive-item" frameborder="0" height="322" src="{{ $video }}"></iframe>
+                                    <iframe allow="encrypted-media" class="embed-responsive-item" frameborder="0" height="322" src="{{ $__header_video_link }}"></iframe>
                                 </div>
                             </div>
                             <div class="title-block-media d-flex flex-row">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-12 col-md-12">
                         <a class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 scroll-link" href="#get-in-touch">
-                            <span>contact us</span>
+                            <span>Contact Us</span>
                             <span class="arrow-icon">&rarr;</span>
                         </a>
                     </div>
@@ -58,8 +58,8 @@
                     <div class="col-12 px-0">
                         <div class="nav-blog-container">
                             <div class="logo-block">
-                                <a href="#" class="d-block">
-                                    <img src="{{ asset('images/logo.svg') }}" class="d-inline-block align-top" alt="One Group Digital Solution">
+                                <a href="{{ url('/') }}" class="d-block">
+                                    <img src="{{ asset('images/logo.svg') }}" class="d-inline-block align-top" alt="{{ config('seotools.meta.defaults.title') }}">
                                 </a>
                             </div>
                             <div class="nav-blog-block">
@@ -78,30 +78,11 @@
         <div class="d-flex justify-content-center align-items-center hidden-scroll" style="height: 100%; min-height: 500px;">
             <a class="glp-close"></a>
             <ul class="nav d-flex flex-column justify-content-center align-items-center text-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#solution">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#advantages">Advantages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#development">development process</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#technologies">technologies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#feedback">Feedback</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team">team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">contact</a>
-                </li>
+                @foreach ($__menu as $key => $value)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ $key }}">{{ $value }}</a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

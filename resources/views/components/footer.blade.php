@@ -1,5 +1,5 @@
 <footer>
-    @isset ($links)
+    @isset ($__links)
         <section class="footer">
             <div class="container">
                 <div class="row">
@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                         <div class="social-block">
-                            @foreach ($links as $key => $link)
+                            @foreach ($__links as $key => $link)
                                 <a href="{{ $link }}" class="{{ $key }}" target="_blank"></a>
                             @endforeach
                         </div>

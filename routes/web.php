@@ -12,7 +12,19 @@
 */
 
 Route::view('/', 'index');
-Route::view('/blog', 'blog');
-Route::view('/post', 'post');
-Route::view('/career', 'career');
-Route::view('/vacancy', 'vacancy');
+Route::view('/blog', 'blog', [
+    'categories' => \App\Category::all(),
+    'posts' => \App\Post::all(),
+])->name('posts');
+Route::view('/post/{post}', 'post', [
+    'categories' => \App\Category::all(),
+    'post' => \App\Post::query()->first(),
+])->name('post');
+Route::view('/career', 'career', [
+    'positions' => \App\Position::all(),
+    'vacancies' => \App\Vacancy::all(),
+]);
+Route::view('/vacancy/{vacancy}', 'vacancy', [
+    'positions' => \App\Position::all(),
+    'vacancy' => \App\Vacancy::query()->first(),
+])->name('vacancy');

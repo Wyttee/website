@@ -9,11 +9,13 @@
         </div>
 
         <div class="row m-0">
-            <div class="col-sm-6 col-md-6 col-lg-4 pt-1 pb-1 pt-sm-2 pb-sm-0 pl-sm-1 pr-sm-1 pb-md-0 pl-md-1 pr-md-1 pb-lg-0 pl-lg-1 pr-lg-1">
-                <div class="portfolio-block" style="background-image: url();" data-toggle="modal" data-target="#portfolioModal">
-                    <div class="portfolio-img-overlay overlay-violet"></div>
+            @foreach ($__list as $item)
+                <div class="col-sm-6 col-md-6 col-lg-4 pt-1 pb-1 pt-sm-2 pb-sm-0 pl-sm-1 pr-sm-1 pb-md-0 pl-md-1 pr-md-1 pb-lg-0 pl-lg-1 pr-lg-1">
+                    <div class="portfolio-block" style="background-image: url({{ $item->photo }});" data-toggle="modal" data-target="#portfolioModal">
+                        <div class="portfolio-img-overlay overlay-violet"></div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
 
         <div class="row m-0">

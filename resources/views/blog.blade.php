@@ -24,20 +24,14 @@
                                 </form>
                             </div>
                             <ol class="list-unstyled">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">DATA & ANALYTICS</a></li>
-                                <li><a href="#">DEVOPS</a></li>
-                                <li><a href="#">EXPERIENCE DESIGN</a></li>
-                                <li><a href="#">FINANCIAL SERVICES</a></li>
-                                <li><a href="#">HEALTHCARE</a></li>
-                                <li><a href="#">INNOVATION PLATFORM</a></li>
-                                <li><a href="#">IOT, AI & ML</a></li>
-                                <li><a href="#">MEDIA</a></li>
-                                <li><a href="#">QUALITY MANAGEMENT</a></li>
-                                <li><a href="#">R&D</a></li>
-                                <li><a href="#">RETAIL</a></li>
-                                <li><a href="#">SECURITY</a></li>
-                                <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+                                <li class="active">
+                                    <a href="#">All</a>
+                                </li>
+                                @foreach ($categories as $category)
+                                    <li>
+                                        <a href="#">{{ strtoupper($category->name) }}</a>
+                                    </li>
+                                @endforeach
                             </ol>
                         </div>
 
@@ -53,19 +47,9 @@
                                 <button class="dropbtn">All</button>
                                 <div class="dropdown-content">
                                     <a href="#">All</a>
-                                    <a href="#">DATA & ANALYTICS</a>
-                                    <a href="#">DEVOPS</a>
-                                    <a href="#">EXPERIENCE DESIGN</a>
-                                    <a href="#">FINANCIAL SERVICES</a>
-                                    <a href="#">HEALTHCARE</a></li>
-                                    <a href="#">INNOVATION PLATFORM</a>
-                                    <a href="#">IOT, AI & ML</a>
-                                    <a href="#">MEDIA</a>
-                                    <a href="#">QUALITY MANAGEMENT</a>
-                                    <a href="#">R&D</a>
-                                    <a href="#">RETAIL</a>
-                                    <a href="#">SECURITY</a>
-                                    <a href="#">SOFTWARE DEVELOPMENT</a>
+                                    @foreach ($categories as $category)
+                                        <a href="#">{{ strtoupper($category->name) }}</a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -73,59 +57,27 @@
 
                     <div class="col px-0 px-lg-3">
                         <div class="row">
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="card-blog">
-                                    <img class="card-img-top" src="{{ asset('images/advantages-bg.jpg') }}" alt="img post">
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <a href="#" class="link-card">
-                                                <h5 class="card-title">THE SITUATION ON THE IT MARKET IN NORDIC COUTRIES</h5>
-                                            </a>
-                                            <p class="card-text">Sweden, Norway, Denmark, and Finland are countries with a great economy level. However, the situation on IT market is not that</p>
-                                        </div>
-                                        <div class="card-bottom">
-                                            <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4">Read more</a>
-                                            <div class="time-post">10 mins for reading</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="card-blog">
-                                    <img class="card-img-top" src="{{ asset('images/advantages-bg.jpg') }}" alt="img post">
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <a href="#" class="link-card">
-                                                <h5 class="card-title">THE SITUATION ON THE IT MARKET IN NORDIC COUTRIES</h5>
-                                            </a>
-                                            <p class="card-text">Sweden, Norway, Denmark, and Finland are countries with a great economy level. However, the situation on IT market is not that</p>
-                                        </div>
-                                        <div class="card-bottom">
-                                            <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4">Read more</a>
-                                            <div class="time-post">10 mins for reading</div>
+                            @foreach ($posts as $post)
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
+                                    <div class="card-blog">
+                                        <img class="card-img-top" src="{{ $post->image }}" alt="img post">
+                                        <div class="card-body">
+                                            <div class="card-content">
+                                                <a href="{{ route('post', ['post' => $post]) }}" class="link-card">
+                                                    <h5 class="card-title">{{ $post->title }}</h5>
+                                                </a>
+                                                <p class="card-text">{!! $post->body !!}</p>
+                                            </div>
+                                            <div class="card-bottom">
+                                                <a href="{{ route('post', ['post' => $post]) }}" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4">Read more</a>
+                                                <div class="time-post">10 mins for reading</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endforeach
 
-                            <div class="col-12 col-sm-6 col-md-12 col-lg-6 px-4">
-                                <div class="card-blog">
-                                    <img class="card-img-top" src="{{ asset('images/advantages-bg.jpg') }}" alt="img post">
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <a href="#" class="link-card">
-                                                <h5 class="card-title">THE SITUATION ON THE IT MARKET IN NORDIC COUTRIES</h5>
-                                            </a>
-                                            <p class="card-text">Sweden, Norway, Denmark, and Finland are countries with a great economy level. However, the situation on IT market is not that</p>
-                                        </div>
-                                        <div class="card-bottom">
-                                            <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4">Read more</a>
-                                            <div class="time-post">10 mins for reading</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
