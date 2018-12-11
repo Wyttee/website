@@ -14,7 +14,8 @@
         "laravel/nova": "^1.0",
         "laravel/tinker": "^1.0",
         "nothingworks/blade-svg": "^0.3.0",
-        "vyuldashev/nova-permission": "^1.4"
+        "vyuldashev/nova-permission": "^1.4",
+        "iboldurev/settings": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.5",
@@ -62,5 +63,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova-components/Settings"
+        }
+    ]
 }

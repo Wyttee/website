@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "094c8208c197a61312788a2f07f92a3d",
+    "content-hash": "398f7ed23062bd09c3a3393152448850",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -605,6 +605,40 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
+        },
+        {
+            "name": "iboldurev/settings",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Settings",
+                "reference": "010d868403ce481935191d781a07f2da1655068c",
+                "shasum": null
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Iboldurev\\Settings\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Iboldurev\\Settings\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ]
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2220,16 +2254,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "2.28.1",
+            "version": "2.28.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "1b5a0631f77d72f06a8949b9e065ba0804ec93a3"
+                "reference": "1887a5851013bf1a457f2a65477f96e98ae3f53a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/1b5a0631f77d72f06a8949b9e065ba0804ec93a3",
-                "reference": "1b5a0631f77d72f06a8949b9e065ba0804ec93a3",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/1887a5851013bf1a457f2a65477f96e98ae3f53a",
+                "reference": "1887a5851013bf1a457f2a65477f96e98ae3f53a",
                 "shasum": ""
             },
             "require": {
@@ -2281,7 +2315,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-12-07T16:59:39+00:00"
+            "time": "2018-12-11T02:03:59+00:00"
         },
         {
             "name": "spatie/once",

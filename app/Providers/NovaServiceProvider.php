@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Iboldurev\Settings\Settings;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
@@ -69,6 +70,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
+            Settings::make(),
             NovaPermissionTool::make(),
         ];
     }
