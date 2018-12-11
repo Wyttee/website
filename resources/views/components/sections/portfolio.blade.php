@@ -27,7 +27,6 @@
     </div>
 </section>
 
-<!-- Modal -->
 <div class="modal modal-fullscreen modal-form fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -40,7 +39,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <figure>
-                                    <img alt="One Group Digital Solutions product" class="img-fluid" src="http://api.ogd-solutions.com/storage/img/howweddingrings-max.jpg">
+                                    <img alt="One Group Digital Solutions product" class="img-fluid" src="{{ asset('images/howweddingrings-max.jpg') }}">
                                 </figure>
                             </div>
                             <div class="col-12">

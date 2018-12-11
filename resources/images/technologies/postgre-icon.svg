@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" id="postgreSql" style="enable-background:new 0 0 72 72;" version="1.1" viewBox="0 0 72 72" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+                                        <style type="text/css">
+                                            .postgreSqlst0{fill:#D1D1D1;}
+                                            .postgreSqlst1{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;}
+                                            .postgreSqlst2{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:bevel;}
+                                            .postgreSqlst3{fill:#FFFFFF;stroke:#FFFFFF;}
+                                        </style>
+    <path class="postgreSql postgreSqlst0" d="M71.1,36.4c-1.5,10.1-4.6,13-10.1,19.8C55.5,62,47.7,71.6,36.5,71c-10.1-1.5-13-4.6-19.8-10.1
+                                            C10.9,55.4,1.3,47.6,1.9,36.4c1.5-10.1,4.6-13,10.1-19.8c5.5-5.8,13.3-15.4,24.5-14.8c10.1,1.5,13,4.6,19.8,10.1
+                                            C62.1,17.4,71.7,25.2,71.1,36.4z"></path>
+    <g id="Layer_x0020_3">
+                                            <path class="postgreSqlst1" d="M36.5,43.5c-0.1,4.3,0,8.6,0.4,9.6c0.4,1,1.3,3.1,4.4,2.4c2.6-0.6,3.5-1.6,3.9-4c0.3-1.7,0.9-6.5,0.9-7.5"></path>
+        <path class="postgreSqlst1" d="M32.8,22.1c0,0-13.9-5.7-13.3,7.2c0.1,2.8,3.9,20.8,8.5,15.4c1.7-2,3.2-3.6,3.2-3.6"></path>
+        <path class="postgreSqlst1" d="M40.4,21.1c-0.5,0.2,7.7-3,12.4,3c1.6,2.1-0.3,10.7-4.8,17.5"></path>
+        <path class="postgreSqlst2" d="M47.9,41.6c0,0,0.3,1.5,4.6,0.6c1.9-0.4,0.8,1.1-1.2,2c-1.6,0.7-5.1,0.9-5.2-0.1
+                                                C46.1,41.4,48.1,42.2,47.9,41.6c-0.1-0.6-1-1.2-1.6-2.6c-0.5-1.3-7.1-10.9,1.8-9.5c0.3-0.1-2.3-8.5-10.7-8.7
+                                                c-8.4-0.1-8.1,10.3-8.1,10.3"></path>
+        <path class="postgreSqlst1" d="M34.2,42.4c-1.2,1.3-0.8,1.5-3.2,2c-2.4,0.5-1,1.4-0.1,1.6c1.1,0.3,3.6,0.7,5.4-1.7c0.5-0.7,0-1.9-0.7-2.2
+                                                C35.2,42,34.8,41.8,34.2,42.4z"></path>
+        <path class="postgreSqlst1" d="M34.1,42.4c-0.1-0.8,0.3-1.7,0.6-2.8c0.6-1.6,2-3.2,0.9-8.3c-0.8-3.8-6.3-0.8-6.3-0.3c0,0.5,0.2,2.6-0.1,5
+                                                c-0.4,3.2,2,5.9,4.9,5.6"></path>
+        <path class="postgreSqlst3" d="M32.8,31c0,0.2,0.3,0.6,0.8,0.7c0.5,0.1,0.8-0.3,0.9-0.5c0-0.2-0.3-0.4-0.8-0.4C33.2,30.8,32.8,30.8,32.8,31
+                                                L32.8,31z"></path>
+        <path class="postgreSqlst3" d="M46.5,30.7c0,0.2-0.3,0.6-0.8,0.7c-0.5,0.1-0.8-0.3-0.9-0.5c0-0.2,0.3-0.4,0.8-0.4
+                                                C46.1,30.4,46.5,30.5,46.5,30.7L46.5,30.7z"></path>
+        <path class="postgreSqlst1" d="M48.1,29.4c0.1,1.4-0.3,2.3-0.3,3.8c-0.1,2.1,1,4.6-0.6,7"></path>
+        <path class="postgreSqlst1" d="M17.9,24"></path>
+                                        </g>
+                                        </svg>
