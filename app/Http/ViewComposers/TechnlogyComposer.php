@@ -2,6 +2,7 @@
 
 namespace App\Http\ViewComposers;
 
+use App\TechnlogyGroup;
 use App\Technology;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
@@ -29,10 +30,14 @@ class TechnlogyComposer
      */
     public function compose(View $view)
     {
+        /** @var Collection $groups */
+        $groups = TechnlogyGroup::all();
+
         /** @var Collection $technologies */
         $technologies = Technology::query()
             ->get();
 
+        $view->with('groups', $groups);
         $view->with('technologies', $technologies);
     }
 }

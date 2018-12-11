@@ -39,7 +39,7 @@
 
                     <div class="d-flex justify-content-sm-center w-100">
                         <div class="col-sm-8 col-md-4 cust-col-4 p-sm-1 pt-md-0 pb-md-0 pl-md-1 pr-md-1 d-flex justify-content-center align-items-center">
-                            <a class="white-btn d-flex justify-content-between align-items-center pt-2 pb-2 pl-4 pr-4 mr-md-1 mr-lg-1" data-toggle="modal" data-target="#technologiesModal">
+                            <a href="{{ route('posts') }}" class="white-btn d-flex justify-content-between align-items-center pt-2 pb-2 pl-4 pr-4 mr-md-1 mr-lg-1">
                                 <span>Show more</span>
                                 <span class="arrow-icon">→</span>
                             </a>

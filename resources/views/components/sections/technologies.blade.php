@@ -5,11 +5,11 @@
                 <h2 class="technologies-titles text-center">Technologies</h2>
             </div>
 
-            @foreach ($technologies->take(3) as $technlogy)
+            @foreach ($groups->take(3) as $group)
                 <div class="col-md-4 pt-0 pb-0 pl-1 pr-1">
                     <div class="technologies-block d-flex flex-column justify-content-center align-items-center">
-                        <h5 class="technologies-block_name text-center">{{ $technlogy->name }}</h5>
-                        @svg('resources/images/php-icon')
+                        <h5 class="technologies-block_name text-center">{{ $group->name }}</h5>
+                        @svg('resources/images/technologies/' . strtolower($group->slug) . '-icon')
                     </div>
                 </div>
             @endforeach
@@ -17,7 +17,7 @@
             <div class="d-flex justify-content-sm-center w-100">
                 <div class="col-sm-8 col-md-4 cust-col-4 p-sm-1 pt-md-0 pb-md-0 pl-md-1 pr-md-1 d-flex justify-content-center align-items-center">
                     <a class="white-btn d-flex justify-content-between align-items-center pt-2 pb-2 pl-4 pr-4 mr-md-1 mr-lg-1" data-toggle="modal" data-target="#technologiesModal">
-                        <span>more information</span>
+                        <span>More information</span>
                         <span class="arrow-icon">→</span>
                     </a>
                 </div>
@@ -35,18 +35,18 @@
             <div class="content-modal bg-preview-container">
                 <div class="gl-preview">
                     <div class="container">
-                        @foreach ($technologies->groupBy('group') as $group => $items)
+                        @foreach ($technologies->groupBy('group.name') as $group => $items)
                             <div class="row">
                                 <div class="col-12 green-circle">
                                     <div class="modal-title_technologies_grup mb-4">
-                                        <h4>{{ strtoupper($group) }}</h4>
+                                        <h4>{{ $group }}</h4>
                                     </div>
                                 </div>
                                 @foreach ($items as $item)
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4 p-1 p-md-1">
                                         <div class="modal-technologies_block d-flex flex-column justify-content-center align-items-center">
                                             <div class="title_technologies">{{ $item->name }}</div>
-                                            @svg('resources/images/technologies/laravel-icon')
+                                            @svg('resources/images/technologies/' . strtolower($item->slug) . '-icon')
                                         </div>
                                     </div>
                                 @endforeach

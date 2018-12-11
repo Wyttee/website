@@ -19,8 +19,8 @@
                                 <h3 class="join-info-block-title">{{ $vacancy->title }}</h3>
                                 <p class="join-info-block-subtitle">{!! $vacancy->body !!}</p>
                                 <div class="col-12 col-md-12 p-0 text-center">
-                                    <a href="#" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1" data-toggle="modal" data-target="#exampleModalCenter">
-                                        <span>apply</span>
+                                    <a href="{{ route('vacancy', ['vacancy' => $vacancy]) }}" class="btn-page btn-contact pt-2 pb-2 pl-4 pr-4 ml-lg-1">
+                                        <span>Apply</span>
                                     </a>
                                 </div>
                             </div>

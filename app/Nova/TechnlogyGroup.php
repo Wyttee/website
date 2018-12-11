@@ -2,21 +2,18 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Technology extends Resource
+class TechnlogyGroup extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Technology';
+    public static $model = 'App\TechnlogyGroup';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -24,6 +21,16 @@ class Technology extends Resource
      * @var string
      */
     public static $title = 'name';
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Groups';
+    }
 
     /**
      * The logical group associated with the resource.
@@ -38,7 +45,7 @@ class Technology extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'slug', 'group',
+        'id', 'name', 'slug',
     ];
 
     /**
@@ -59,10 +66,8 @@ class Technology extends Resource
             Text::make('Slug')
                 ->sortable()
                 ->rules('required', 'max:255')
-                ->creationRules('unique:technologies,slug')
-                ->updateRules('unique:technologies,slug,{{resourceId}}'),
-
-            BelongsTo::make('Group', 'group', TechnlogyGroup::class),
+                ->creationRules('unique:technlogy_groups,slug')
+                ->updateRules('unique:technlogy_groups,slug,{{resourceId}}'),
         ];
     }
 

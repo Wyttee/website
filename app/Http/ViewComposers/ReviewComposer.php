@@ -2,7 +2,9 @@
 
 namespace App\Http\ViewComposers;
 
+use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Contracts\View\View;
 
 class ReviewComposer
@@ -27,6 +29,10 @@ class ReviewComposer
      */
     public function compose(View $view)
     {
-        //
+        /** @var Collection $reviews */
+        $reviews = Review::query()
+            ->get();
+
+        $view->with('reviews', $reviews);
     }
 }

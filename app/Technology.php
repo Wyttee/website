@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Technology extends Model
@@ -15,6 +16,16 @@ class Technology extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'slug', 'group',
+        'name', 'slug',
     ];
+
+    /**
+     * Get the group of the technology.
+     *
+     * @return BelongsTo
+     */
+    public function group()
+    {
+        return $this->belongsTo(TechnlogyGroup::class);
+    }
 }
