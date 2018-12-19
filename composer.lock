@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b81310ecf106a5e7f38205a8c1a8ae65",
+    "content-hash": "ad682b1d24eaf5846172381216a21621",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -4250,6 +4250,60 @@
                 "whoops"
             ],
             "time": "2018-10-23T09:00:00+00:00"
+        },
+        {
+            "name": "franzl/studio",
+            "version": "0.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/franzliedke/studio.git",
+                "reference": "4c8784d2e35c6163bd80b1255fffc9454ac29d5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/franzliedke/studio/zipball/4c8784d2e35c6163bd80b1255fffc9454ac29d5f",
+                "reference": "4c8784d2e35c6163bd80b1255fffc9454ac29d5f",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "symfony/console": "^2.7 || ^3.0 || ^4.0",
+                "symfony/filesystem": "^2.5 || ^3.0 || ^4.0",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0"
+            },
+            "replace": {
+                "franzliedke/studio": "self.version"
+            },
+            "require-dev": {
+                "composer/composer": "dev-master",
+                "phpspec/phpspec": "~2.3"
+            },
+            "bin": [
+                "bin/studio"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11.x-dev"
+                },
+                "class": "Studio\\Composer\\StudioPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Studio\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Develop your Composer libraries with style",
+            "keywords": [
+                "composer",
+                "development",
+                "workflow"
+            ],
+            "time": "2017-12-01T17:45:24+00:00"
         },
         {
             "name": "fzaninotto/faker",
