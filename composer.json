@@ -13,7 +13,7 @@
         "fideloper/proxy": "^4.0",
         "iboldurev/settings": "*",
         "laravel/framework": "5.7.*",
-        "laravel/nova": "^1.0",
+        "laravel/nova": "*",
         "laravel/tinker": "^1.0",
         "nothingworks/blade-svg": "^0.3.0",
         "vyuldashev/nova-permission": "^1.4"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02d3837d500ee08a87fc580882273837",
+    "content-hash": "3e35ff8c864b62ebe7103fa3d484b312",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -1002,8 +1002,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/Users/iboldurev/Documents/Developers/Packages/laravel-nova",
-                "reference": "d3f4b1c4a1e2ea59af9eb1789031ce7351a6a8ef",
+                "url": "./nova",
+                "reference": "6b34fd3882e3cff2dc99d288393e92025bc93094",
                 "shasum": null
             },
             "require": {
