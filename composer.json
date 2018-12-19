@@ -69,6 +69,10 @@
     "repositories": [
         {
             "type": "path",
+            "url": "./nova"
+        },
+        {
+            "type": "path",
             "url": "./nova-components/Settings"
         }
     ]
