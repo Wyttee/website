@@ -56,6 +56,6 @@ class User extends Authenticatable
      */
     public function getPhotoAttribute()
     {
-        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/150' : url($this->getAttribute('photo_url'));
+        return empty($this->getAttribute('photo_url')) ? 'https://via.placeholder.com/150' : url('storage/', $this->getAttribute('photo_url'));
     }
 }
